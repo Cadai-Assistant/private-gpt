@@ -19,8 +19,8 @@ _settings_folder = os.environ.get("PGPT_SETTINGS_FOLDER", PROJECT_ROOT_PATH)
 _test_profile = ["test"] if "tests.fixtures" in sys.modules else []
 
 active_profiles: list[str] = unique_list(
-    ["default"]
-    + [
+    #["default"]+ 
+    [
         item.strip()
         for item in os.environ.get("PGPT_PROFILES", "").split(",")
         if item.strip()
